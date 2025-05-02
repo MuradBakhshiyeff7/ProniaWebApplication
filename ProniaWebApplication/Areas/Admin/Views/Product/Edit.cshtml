@@ -1,0 +1,46 @@
+﻿@model ProniaWebApplication.Models.Product
+
+<h2>Edit Product</h2>
+
+<form asp-action="Edit" method="post">
+    <!-- Gizli Id göndərilməsi vacibdir -->
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="form-group">
+        <label>Name</label>
+        <input name="Name" class="form-control" value="@Model.Name" />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input name="Price" class="form-control" type="number" step="0.01" value="@Model.Price" />
+    </div>
+
+    <div class="form-group">
+        <label>Main Image</label>
+        <input name="MainImage" class="form-control" value="@Model.MainImage" />
+    </div>
+
+    <div class="form-group">
+        <label>Hover Image</label>
+        <input name="HoverImage" class="form-control" value="@Model.HoverImage" />
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea name="Description" class="form-control">@Model.Description</textarea>
+    </div>
+
+    <div class="form-group">
+        <label>CategoryId</label>
+        <input name="CategoryId" class="form-control" type="number" value="@Model.CategoryId" />
+        <small class="text-muted">Məsələn: 1, 2, və s.</small>
+    </div>
+
+    <div class="form-group">
+        <input name="IsPrime" type="checkbox" @(Model.IsPrime ? "checked" : "") />
+        <label>Has hover image?</label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>

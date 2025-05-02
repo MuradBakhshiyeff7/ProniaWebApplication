@@ -17,7 +17,10 @@ namespace ProniaWebApplication.Controllers
         public IActionResult Index()
         {
             var products = _context.Products.ToList(); 
+
             return View(products);
+
+            
         }
     }
 }

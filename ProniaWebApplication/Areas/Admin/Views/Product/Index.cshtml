@@ -1,0 +1,36 @@
+﻿@model List<ProniaWebApplication.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1 class="h3 mb-4 text-gray-800">Products</h1>
+
+<a class="btn btn-primary mb-3" href="/Admin/Product/Create">Create New</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>$@product.Price</td>
+                <td>@product.Category?.Name</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/Admin/Product/Edit/@product.Id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Admin/Product/Delete/@product.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
