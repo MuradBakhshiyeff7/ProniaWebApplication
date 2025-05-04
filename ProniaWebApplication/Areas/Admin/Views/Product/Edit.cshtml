@@ -1,46 +1,58 @@
-﻿@model ProniaWebApplication.Models.Product
+﻿@model Product
+@{
+    ViewData["Title"] = "Edit Product";
+    var categories = ViewBag.Categories as List<Category>;
+}
 
-<h2>Edit Product</h2>
+<h1>Edit Product</h1>
 
 <form asp-action="Edit" method="post">
-    <!-- Gizli Id göndərilməsi vacibdir -->
-    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
-        <label>Name</label>
-        <input name="Name" class="form-control" value="@Model.Name" />
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label>Price</label>
-        <input name="Price" class="form-control" type="number" step="0.01" value="@Model.Price" />
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label>Main Image</label>
-        <input name="MainImage" class="form-control" value="@Model.MainImage" />
+        <label asp-for="MainImage"></label>
+        <input asp-for="MainImage" class="form-control" />
+        <span asp-validation-for="MainImage" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label>Hover Image</label>
-        <input name="HoverImage" class="form-control" value="@Model.HoverImage" />
+        <label asp-for="HoverImage"></label>
+        <input asp-for="HoverImage" class="form-control" />
+        <span asp-validation-for="HoverImage" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label>Description</label>
-        <textarea name="Description" class="form-control">@Model.Description</textarea>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label>CategoryId</label>
-        <input name="CategoryId" class="form-control" type="number" value="@Model.CategoryId" />
-        <small class="text-muted">Məsələn: 1, 2, və s.</small>
+        <label asp-for="CategoryId">Category</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="new SelectList(categories, nameof(Category.Id), nameof(Category.Name))">
+            <option disabled selected>Select Category </option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <input name="IsPrime" type="checkbox" @(Model.IsPrime ? "checked" : "") />
-        <label>Has hover image?</label>
-    </div>
+    
 
-    <button type="submit" class="btn btn-success">Save Changes</button>
+    <button type="submit" class="btn btn-success">Update</button>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

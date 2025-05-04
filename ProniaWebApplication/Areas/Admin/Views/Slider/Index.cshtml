@@ -1,0 +1,35 @@
+﻿@model List<Slider>
+
+<h2>Sliders</h2>
+<a  asp-controller="Slider" asp-action="Create" class="btn btn-primary mb-3">Create New</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>Image</th>
+            <th>RedirectUrl</th>
+            <th>IsActive</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Subtitle</td>
+                    <td>@item.Image</td>
+                    <td>@item.RedirectUrl</td>
+                    <td>@item.IsActive</td>
+                    <td>
+                        <a  asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-controller="Slider" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

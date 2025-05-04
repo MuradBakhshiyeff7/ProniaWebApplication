@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProniaWebApplication.DAL;
 using ProniaWebApplication.Models;
+using ProniaWebApplication.ViewModels;
 using System.Diagnostics;
 
 namespace ProniaWebApplication.Controllers
@@ -16,11 +17,15 @@ namespace ProniaWebApplication.Controllers
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList(); 
+            var model = new HomeVM
+            {
+                Products = _context.Products.ToList(),
+                Sliders = _context.Sliders.Where(s => s.IsActive).ToList()
+            };
 
-            return View(products);
+            return View(model);
 
-            
+
         }
     }
 }

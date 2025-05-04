@@ -43,20 +43,22 @@ namespace ProniaWebApplication.Areas.Admin.Controllers
 
             _context.Products.Add(product);
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
 
-        
+
         public IActionResult Edit(int id)
         {
-            var product = _context.Products.Find(id);
-            if (product == null) return NotFound();
+            var product = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (product == null) 
+                return NotFound();
 
             ViewBag.Categories = _context.Categories.ToList();
             return View(product);
         }
 
-        
+
+
         [HttpPost]
         public IActionResult Edit(Product product)
         {
@@ -68,10 +70,11 @@ namespace ProniaWebApplication.Areas.Admin.Controllers
 
             _context.Products.Update(product);
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
 
-       
+
+
         public IActionResult Delete(int id)
         {
             var product = _context.Products.Find(id);
@@ -79,7 +82,7 @@ namespace ProniaWebApplication.Areas.Admin.Controllers
 
             _context.Products.Remove(product);
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
     }
 }
