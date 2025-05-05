@@ -1,28 +1,38 @@
-﻿@model Slider
+﻿@model SliderVM
 
-<h2>Edit Slider</h2>
-
-<form  asp-controller="Slider" asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-    <div class="mb-3">
+<form asp-controller="Slider" asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+    <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
     </div>
-    <div class="mb-3">
+
+    <div class="form-group">
         <label asp-for="Subtitle"></label>
         <input asp-for="Subtitle" class="form-control" />
+        <span asp-validation-for="Subtitle" class="text-danger"></span>
     </div>
-    <div class="mb-3">
-        <label asp-for="Image"></label>
-        <input asp-for="Image" class="form-control" />
-    </div>
-    <div class="mb-3">
+
+    <div class="form-group">
         <label asp-for="RedirectUrl"></label>
         <input asp-for="RedirectUrl" class="form-control" />
+        <span asp-validation-for="RedirectUrl" class="text-danger"></span>
     </div>
-    <div class="form-check mb-3">
+
+    <div class="form-group">
+        <label asp-for="IsActive"></label>
         <input asp-for="IsActive" class="form-check-input" />
-        <label asp-for="IsActive" class="form-check-label"></label>
     </div>
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+
+    <div class="form-group">
+        <label asp-for="ImageFile"></label>
+        <input asp-for="ImageFile" type="file" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <img src="~/assets/images/slider/@Model.Image" alt="Current Image" style="max-height:150px;" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
 </form>

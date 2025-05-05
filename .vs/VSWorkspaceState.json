@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ProniaWebApplication",
+    "\\ProniaWebApplication\\Areas",
+    "\\ProniaWebApplication\\Areas\\Admin",
+    "\\ProniaWebApplication\\Areas\\Admin\\Controllers",
+    "\\ProniaWebApplication\\Areas\\Admin\\Views",
+    "\\ProniaWebApplication\\Areas\\Admin\\Views\\Slider"
+  ],
+  "SelectedNode": "\\ProniaWebApplication\\Areas\\Admin\\Controllers\\SliderController.cs",
+  "PreviewInSolutionExplorer": false
+}
