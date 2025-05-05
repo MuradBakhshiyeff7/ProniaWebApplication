@@ -1,4 +1,7 @@
-﻿namespace ProniaWebApplication.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProniaWebApplication.Models
 {
     public class Product
     {
@@ -12,9 +15,15 @@
         public bool IsPrime { get; set; }
 
         public int CategoryId { get; set; }
-
-        
         public Category? Category { get; set; }
+
+        [NotMapped]
+        [Required(ErrorMessage = "Main image bos olmamalidi")]
+        public IFormFile MainImageFile { get; set; }
+
+        [NotMapped]
+        [Required(ErrorMessage = "Hover image bos olmamalidi")]
+        public IFormFile HoverImageFile { get; set; }
 
     }
 
