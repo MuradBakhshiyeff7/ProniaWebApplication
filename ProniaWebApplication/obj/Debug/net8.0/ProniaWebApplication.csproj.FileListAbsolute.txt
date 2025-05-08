@@ -784,3 +784,8 @@ C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\obj\Debug\net8.0\scop
 C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\obj\Debug\net8.0\ProniaWe.F4ED6053.Up2Date
 C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\obj\Debug\net8.0\ProniaWebApplication.genruntimeconfig.cache
 C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\obj\Debug\net8.0\ref\ProniaWebApplication.dll
+C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\I Novbe\ProniaWebApplication\ProniaWebApplication\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

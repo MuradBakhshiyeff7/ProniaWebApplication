@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hmIdUca/iT2Zv6u99rjv0m6C/bcdZwKcmmIYsH3+/+4=",
+  "Hash": "JbEuvH7k/DkSUdh3sSw+Fc61nCTfqGTiQ1GueIgkv0M=",
   "Source": "ProniaWebApplication",
   "BasePath": "_content/ProniaWebApplication",
   "Mode": "Default",
@@ -37388,6 +37388,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\slider\\slide-img\\2-3-960x741.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\I Novbe\\ProniaWebApplication\\ProniaWebApplication\\wwwroot\\assets\\images\\slider\\slide-img\\a8a4eac9-efb8-489d-aa32-57f2ab236ff1.jpg",
+      "SourceId": "ProniaWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\I Novbe\\ProniaWebApplication\\ProniaWebApplication\\wwwroot\\",
+      "BasePath": "_content/ProniaWebApplication",
+      "RelativePath": "assets/images/slider/slide-img/a8a4eac9-efb8-489d-aa32-57f2ab236ff1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\slider\\slide-img\\a8a4eac9-efb8-489d-aa32-57f2ab236ff1.jpg"
     },
     {
       "Identity": "C:\\Users\\I Novbe\\ProniaWebApplication\\ProniaWebApplication\\wwwroot\\assets\\images\\slider\\slide-img\\img-1.jpg",
